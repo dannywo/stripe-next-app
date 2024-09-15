@@ -29,10 +29,14 @@ export default function LoginForm() {
   }
 
   return (
-    <button
-      onClick={handleSignUp}
-      disabled={loading}>
-      {loading ? 'Signing up...' : 'Sign up with random email and password'}
-    </button>
+    <div className="flex flex-col">
+      <h2>Sign Up</h2>
+      <button
+        className="rounded hover:rounded-lg bg-slate-700 p-4"
+        onClick={handleSignUp}
+        disabled={loading}>
+        {loading ? 'Signing up...' : 'Sign up with random email and password'}
+      </button>
+    </div>
   )
 }
